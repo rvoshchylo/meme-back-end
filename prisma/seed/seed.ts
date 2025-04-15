@@ -11,6 +11,7 @@ async function main() {
   const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
   const publicDir = join(__dirname, '../..', 'public');
 
+  await prisma.like.deleteMany();
   await prisma.meme.deleteMany();
   console.log('🗑️ Cleared existing memes');
 
