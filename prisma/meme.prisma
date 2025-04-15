@@ -1,0 +1,8 @@
+model Meme {
+  id        String   @id @default(uuid())
+  name      String
+  image     String
+  likes     Int      @default(0)
+  likedBy   Like[]
+  createdAt DateTime @default(now())
+}
